@@ -21,5 +21,5 @@ def get_distance():
 """
 #actual code
 for i in range(100):
-    get_distance(Rass.outPin, Rass.inPin, printDist = True)
+    get_distance(outPin, inPin, printDist = True)
     sleep(1)
