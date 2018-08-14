@@ -1,20 +1,18 @@
 from Rass import *
 
-rass = Rass()
-
 while True:
         print("enter command")
         key = input()
         if key == 'w':
-                rass.forwards()
+                forwards()
         elif key == 'x':
-                rass.stop()
+                stop()
         elif key == 's':
-                rass.backwards()
+                backwards()
         elif key == 'd':
-                rass.right()
+                right()
         elif key == 'a':
-                rass.left()
+                left()
         elif key == 'z':
                 break
         else:

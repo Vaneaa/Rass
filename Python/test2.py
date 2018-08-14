@@ -1,17 +1,11 @@
 from Rass import *
 from time import sleep
 from time import time
-rass = Rass()
-
-# setting up the ultrasonic sensor
-inPin = 23
-outPin = 24
-GPIO.setup(inPin, GPIO.IN)
-GPIO.setup(outPin, GPIO.OUT)
-
-GPIO.output(outPin, False)
-sleep(2)
-
+#setPin function example (highly redundant)
+#setPin(oldPin, newPin) or outPin(pRF, 27) etc.
+outPin = setPin(outPin, outPin)
+#moved to Rass.py
+"""
 def get_distance():
     GPIO.output(outPin, True)
     sleep(0.00001)
@@ -24,7 +18,8 @@ def get_distance():
     distance = pulse_duration * 17150
     distance = round(distance, 2)
     print(distance)
-
+"""
+#actual code
 for i in range(100):
-    get_distance()
+    get_distance(Rass.outPin, Rass.inPin, printDist = True)
     sleep(1)
